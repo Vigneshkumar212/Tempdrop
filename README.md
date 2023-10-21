@@ -1,6 +1,6 @@
 # Tempdrop
 
-An app to execute my future extensions(of this project) without needing to install every file every single time and to choose what all extensions you want running at one time
+An app to execute my future extensions(of this project), It helps in intrested people to stay clutter free from all the various projects that I create, without needing to install an electron app every single time.
 This app runs as the main thread to some of my testing projects or projects that I do as an experiment.
 
 This also serves as a simple app for users who would like to install and use the extensions rather than installing large electron apps for each one of the project that anyone creates.
@@ -15,7 +15,8 @@ First we will be creating an extension then we will be looking into how to run t
 ## The following steps will help you create a extension for this app
 - Step1 : Install and run this app (you will notice a new folder in the documents)
 - Step2 : Open the extensions folder under the folder that the app had created
-- Step3 : Now create a file called `main.js` and write all your electron based code. This file will be executed in the `MAIN PROCESS` of the electron app, you can import any electron object here
+- Step3 : Create a folder with anyname
+- Step4 : Now create a file called `main.js` and write all your electron based code. This file will be executed in the `MAIN PROCESS` of the electron app, you can import any electron object here
 `NOTE: MAKE SURE TO USE __dirname WHEN REFERING TO A PATH IN YOUR EXTENSION `
 - Step4 : Create a file called `ext.json` and add the following keys and values
   1. `name` - app name (STRING)
