@@ -1,0 +1,233 @@
+*{
+    user-select: none;
+    -webkit-user-drag: none;
+    outline: none;
+    transition-duration: 0.15s;
+    font-family: 'Poppins', sans-serif;
+}
+body,html{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #171717;
+}
+.top{
+    height: 30px;
+    display: flex;
+    align-items: center;
+    background-color: #212121;
+    -webkit-app-region: drag;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.top span{
+    height: 30px;
+    width: 45px;
+    background-color: #212121;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 20px;
+    -webkit-app-region: no-drag;
+}
+.top .disabled{
+    color: #2d2936;
+}
+.top span:hover{
+    background-color: #ffffff10;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.writingarea{
+    border: 0px; background: none; color: #eeeeee;
+    overflow: auto;
+    height: calc(100vh - 50px);
+    width: calc(100% - 20px);
+    padding: 10px;
+    padding-top: 40px;
+}
+.typingArea{
+    height: 100%;
+    width: 100%;
+}
+.typingArea .writingarea img{
+    width: 80%;
+    margin: 10%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #ffffff20;
+    border-radius: 10px;
+}
+::-webkit-scrollbar{
+    width: 5px;
+    height: 5px;
+}
+.extensions{
+    height: calc(100% - 30px);
+    padding-top: 30px;
+    width: 100%;
+    overflow: auto;
+}
+.extensions .extension{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% -40px);
+    padding: 10px 20px;
+    height: max-content;
+}
+.extensions .extension .l{
+    display: flex;
+    align-items: center;
+}
+.extensions .extension .l .name{
+    color: #fff;
+    font-size: 14px;
+    margin-left: 20px;
+}
+.extensions .extension .l img{
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    background-color: #8175fe;
+}
+.extensions .extension .r .container {
+	position: relative;
+    width: 50px;
+}
+.extensions .extension .r input[type="checkbox"] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	cursor: pointer;
+	outline: none;
+	height: 30px;
+	width: 50px;
+	background-color: #000000;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+    border-radius: 10px;
+}
+.extensions .extension .r input[type="checkbox"]:before {
+	content: "";
+    font-size: 1.5em;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background-color: #2d2936;
+	color: #a0a0a0;
+	top: 5px;
+	left: 5px;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	letter-spacing: 1px;
+    border-radius: 10px;
+}
+.extensions .extension .r input[type="checkbox"]:checked {
+	background: -o-linear-gradient(315deg, #8175fe, #89befe);
+	background: linear-gradient(135deg, #8175fe, #89befe);
+}
+.extensions .extension .r input[type="checkbox"]:checked:before {
+	content: "";
+	left: 25px;
+	color: #89befe;
+}
+
+.requests{
+    width:100%;
+    padding-top: 40px;
+    height:  calc(100% - 40px);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+}
+.requests .top{
+    width: 100%;
+}
+.requests .title{
+    font-size: 20px;
+    color: #89befe;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.request{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: calc(100%- 40px);
+    margin: 20px;
+}
+.request .l{
+    display: flex;
+    align-items: center;
+}
+.request .l img{
+    margin: 0px;
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+}
+.request .l .stack{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+.request .l .stack .name{
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    align-items: flex-end;
+}
+.request .l .stack .name .version{
+    font-size: 14px;
+    color: #a0a0a0;
+    margin-left: 5px;
+}
+.request .l .stack .author{
+    font-size: 14px;
+    color: #fff;
+}
+.request .button{
+    font-size: 20px;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.request .button:hover{
+    background-color: #ffffff10;
+}
